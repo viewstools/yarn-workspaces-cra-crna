@@ -1,0 +1,13 @@
+{
+  "name": "views",
+  "version": "0.0.1",
+  "scripts": {
+    "native": "views-morph . --as react-native --watch",
+    "native:build": "views-morph . --as react-native",
+    "web": "views-morph . --as react-dom --watch",
+    "web:build": "views-morph . --as react-dom"
+  },
+  "devDependencies": {
+    "views-morph": "^0.7.3"
+  }
+}

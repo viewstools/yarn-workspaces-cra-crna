@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+a,
+button,
+div,
+img,
+input,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+nav,
+label,
+li,
+ol,
+p,
+span,
+svg,
+ul,
+textarea {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+a,
+button,
+input,
+textarea {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  line-height: inherit;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+}
+button::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* remove number arrows */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

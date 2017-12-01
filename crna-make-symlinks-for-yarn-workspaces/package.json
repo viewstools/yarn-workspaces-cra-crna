@@ -1,0 +1,12 @@
+{
+  "name": "crna-make-symlinks-for-yarn-workspaces",
+  "version": "1.0.0",
+  "description": "Symlink modules that Create React Native App needs when running on yarn workspaces",
+  "main": "index.js",
+  "repository": "git@github.com:viewsdx/yarn-workspaces-cra-crna.git",
+  "author": "Darío Javier Cravoro <dario@uxtemple.com>",
+  "license": "MIT",
+  "dependencies": {
+    "find-root": "^1.1.0"
+  }
+}

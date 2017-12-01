@@ -1,0 +1,12 @@
+{
+  "name": "react-app-rewire-yarn-workspaces",
+  "version": "1.0.2",
+  "description": "Compile yarn workspaces as a part of your CRA app",
+  "main": "index.js",
+  "repository": "git@github.com:viewsdx/yarn-workspaces-cra-crna.git",
+  "author": "Darío Javier Cravoro <dario@uxtemple.com>",
+  "license": "MIT",
+  "dependencies": {
+    "get-yarn-workspaces": "^1.0.0"
+  }
+}
