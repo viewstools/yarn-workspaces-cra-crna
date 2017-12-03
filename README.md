@@ -147,7 +147,7 @@ Install `react-app-rewired` and `react-app-rewire-yarn-workspaces` in the web pr
 yarn add --dev react-app-rewired react-app-rewire-yarn-workspaces
 ```
 
-Swap the `start`, `build`, and `test` scripts for these:
+Swap the `start`, `build`, and `test` scripts in `package.json` for these:
 ```
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
