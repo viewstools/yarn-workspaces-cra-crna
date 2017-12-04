@@ -132,8 +132,8 @@ just go to a temporary folder anywhere and make a new project:
 cd /tmp
 # make the app
 create-react-app web
-# get rid of node modules
-rm -rf web/node_modules
+# get rid of node modules and yarn.lock
+rm -rf web/node_modules web/yarn.lock
 # move it to the workspaces
 mv web ~/workspaces
 cd ~/workspaces/web
@@ -197,8 +197,8 @@ just go to a temporary folder anywhere and make a new project:
 cd /tmp
 # make the app
 create-react-native-app native
-# get rid of node modules
-rm -rf native/node_modules
+# get rid of node modules and yarn.lock
+rm -rf native/node_modules native/yarn.lock
 # move it to the workspaces
 mv native ~/workspaces
 cd ~/workspaces/native

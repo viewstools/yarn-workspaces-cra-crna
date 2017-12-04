@@ -47,8 +47,8 @@
     cross-spawn "^5.1.0"
 
 "@expo/vector-icons@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-6.2.0.tgz#1269b263c3d78609cfa5e65b9b524aeb4718c335"
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-6.2.1.tgz#5252eed11e8863c0faf3e4f8d5006e41868d409d"
   dependencies:
     lodash "^4.17.4"
     react-native-vector-icons "4.4.2"
@@ -155,8 +155,8 @@ ajv@^4.9.1:
     json-stable-stringify "^1.0.1"
 
 ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5, ajv@^5.2.0, ajv@^5.2.2, ajv@^5.2.3:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.0.tgz#eb2840746e9dc48bd5e063a36e3fd400c5eab5a9"
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.1.tgz#b38bb8876d9e86bee994956a04e721e88b248eb2"
   dependencies:
     co "^4.6.0"
     fast-deep-equal "^1.0.0"
@@ -447,7 +447,7 @@ auth0@^2.7.0:
     request "^2.83.0"
     rest-facade "^1.5.0"
 
-autoprefixer@7.1.6, autoprefixer@^7.1.1:
+autoprefixer@7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.1.6.tgz#fb933039f74af74a83e71225ce78d9fd58ba84d7"
   dependencies:
@@ -467,6 +467,17 @@ autoprefixer@^6.3.1:
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.16"
+    postcss-value-parser "^3.2.3"
+
+autoprefixer@^7.1.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.1.tgz#906b1447a0e6a9e13b371f7909bc4e36da5a5a79"
+  dependencies:
+    browserslist "^2.9.1"
+    caniuse-lite "^1.0.30000777"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^6.0.14"
     postcss-value-parser "^3.2.3"
 
 aws-sign2@~0.6.0:
@@ -1628,7 +1639,7 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     caniuse-db "^1.0.30000639"
     electron-to-chromium "^1.2.7"
 
-browserslist@^2.1.2, browserslist@^2.5.1:
+browserslist@^2.1.2, browserslist@^2.5.1, browserslist@^2.9.1:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.9.1.tgz#b72d3982ab01b5cd24da62ff6d45573886aff275"
   dependencies:
@@ -1805,12 +1816,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000777"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000777.tgz#2e19adba63bdd7c501df637a862adead7f4bc054"
+  version "1.0.30000778"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000778.tgz#167c60e9542a2aa60537c446fb3881d853a3072a"
 
-caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000770:
-  version "1.0.30000777"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000777.tgz#31c18a4a8cd49782ebb305c8e8a93e6b3b3e4f13"
+caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000770, caniuse-lite@^1.0.30000777:
+  version "1.0.30000778"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000778.tgz#f1e7cb8b13b1f6744402291d75f0bcd4c3160369"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -3324,8 +3335,8 @@ expect@^21.2.1:
     jest-regex-util "^21.2.0"
 
 expo@^23.0.4:
-  version "23.0.4"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-23.0.4.tgz#2e772287e2fda2f7dbedecc3b998a29f7b4d7f45"
+  version "23.0.6"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-23.0.6.tgz#8cb2c3992b385eb5866cc91f25f159420258d19a"
   dependencies:
     "@expo/vector-icons" "^6.2.0"
     babel-preset-expo "^4.0.0"
@@ -5620,8 +5631,8 @@ kind-of@^5.0.0, kind-of@^5.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-5.1.0.tgz#729c91e2d857b7a419a1f9aa65685c4c33f5845d"
 
 kind-of@^6.0.0:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.1.tgz#4948e6263553ac3712fc44d305b77851d9e40ea4"
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
 klaw@^1.0.0:
   version "1.3.1"
@@ -7318,7 +7329,7 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.13:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.13, postcss@^6.0.14:
   version "6.0.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.14.tgz#5534c72114739e75d0afcf017db853099f562885"
   dependencies:
@@ -9378,15 +9389,15 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
 uglify-es@^3.1.8:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.0.tgz#fbbfb9dc465ec7e5065701b9720d0de977d0bc24"
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.1.tgz#93de0aad8a1bb629c8a316f686351bc4d6ece687"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
 
 uglify-js@3.2.x, uglify-js@^3.0.13:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.0.tgz#cb411ee4ca0e0cadbfe3a4e1a1da97e6fa0d19c1"
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.1.tgz#d6427fd45a25fefc5d196689c0c772a6915e10fe"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
@@ -9645,8 +9656,8 @@ vhost@~3.0.1:
   resolved "https://registry.yarnpkg.com/vhost/-/vhost-3.0.2.tgz#2fb1decd4c466aa88b0f9341af33dc1aff2478d5"
 
 views-morph@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/views-morph/-/views-morph-0.7.3.tgz#f05cd35779bc4eddd9a565c8fd0cc0ea009cc571"
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/views-morph/-/views-morph-0.7.5.tgz#aa9f2054f4806cb5a53039226dbc76dac62e8676"
   dependencies:
     array-uniq "^1.0.3"
     babel-core "^6.26.0"
