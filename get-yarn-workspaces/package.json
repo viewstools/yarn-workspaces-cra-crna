@@ -1,12 +1,14 @@
 {
   "name": "get-yarn-workspaces",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get yarn workspaces paths relative to a project",
   "main": "index.js",
   "repository": "git@github.com:viewsdx/yarn-workspaces-cra-crna.git",
   "author": "Darío Javier Cravoro <dario@uxtemple.com>",
   "license": "MIT",
   "dependencies": {
-    "find-root": "^1.1.0"
+    "find-root": "^1.1.0",
+    "flatten": "^1.0.2",
+    "glob": "^7.1.2"
   }
 }
