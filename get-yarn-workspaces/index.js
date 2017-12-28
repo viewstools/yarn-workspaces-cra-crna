@@ -1,6 +1,7 @@
 const findRoot = require('find-root')
 const fs = require('fs')
 const path = require('path')
+const globa = require('glob')
 
 module.exports = function getWorkspaces(from) {
   const root = findRoot(from, dir => {
@@ -9,6 +10,14 @@ module.exports = function getWorkspaces(from) {
   })
 
   const { workspaces } = require(path.join(root, 'package.json'))
-
-  return workspaces.map(name => path.join(root, name))
+  const paths = [].concat.apply(
+    [],
+    workspaces
+      .map(name => path.join(root, name))
+      .map(p => {
+        if (!p.match(/\*/)) return p
+        return glob.sync(p)
+      })
+  )
+  return paths
 }
