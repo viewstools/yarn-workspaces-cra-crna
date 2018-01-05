@@ -1,5 +1,5 @@
 const findRoot = require('find-root');
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 const link = (name, fromBase, toBase) => {
@@ -7,7 +7,7 @@ const link = (name, fromBase, toBase) => {
   const to = path.join(toBase, 'node_modules', name);
 
   if (fs.existsSync(to)) {
-    fs.unlinkSync(to);
+    fs.removeSync(to);
   }
 
   fs.symlinkSync(from, to, 'dir');
