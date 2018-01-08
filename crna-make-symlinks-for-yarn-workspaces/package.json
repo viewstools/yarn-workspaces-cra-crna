@@ -7,6 +7,7 @@
   "author": "Darío Javier Cravoro <dario@uxtemple.com>",
   "license": "MIT",
   "dependencies": {
-    "find-root": "^1.1.0"
+    "find-root": "^1.1.0",
+    "fs-extra": "^5.0.0"
   }
 }
