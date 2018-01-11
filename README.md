@@ -35,7 +35,7 @@ fit:
 Make a new folder where you want your workspaces to be and add a `package.json`
 that looks like this:
 
-```
+```json
 {
   "private": true,
   "workspaces": [
@@ -54,7 +54,7 @@ For the rest of this guide, we're going to assume that this folder is called
 `core` in our example will be just an empty project. Make a `core` folder and put
 this `package.json` inside:
 
-```
+```json
 {
   "name": "core",
   "version": "0.0.1"
@@ -65,18 +65,18 @@ Let's put a few sample files in there to use as a test. We'll also leverage the
 project specific extensions in web and native.
 
 `test.js`:
-```
+```js
 import value from './value'
 export default value
 ```
 
 `value.native.js`:
-```
+```js
 export default 'value in native'
 ```
 
 `value.web.js`:
-```
+```js
 export default 'value in web'
 ```
 
@@ -87,7 +87,7 @@ components across your projects here. Otherwise, just skip this section.
 
 `views` is where our UI sits. Make a `views` folder and put this `package.json` inside:
 
-```
+```json
 {
   "name": "views",
   "version": "0.0.1",
@@ -101,7 +101,7 @@ components across your projects here. Otherwise, just skip this section.
 ```
 
 Then add the latest `views-morph` to it:
-```
+```bash
 yarn add --dev views-morph
 ```
 
@@ -127,7 +127,7 @@ https://twitter.com/viewsdx or join the conversation at https://slack.viewsdx.co
 There are some issues with running CRA's init scripts inside the workspace, so
 just go to a temporary folder anywhere and make a new project:
 
-```
+```bash
 # go to some temporary location
 cd /tmp
 # make the app
@@ -143,19 +143,19 @@ The next step is to have CRA compile your other workspaces code if they're
 imported by your app.
 
 Install `react-app-rewired` and `react-app-rewire-yarn-workspaces` in the web project:
-```
+```bash
 yarn add --dev react-app-rewired react-app-rewire-yarn-workspaces
 ```
 
 Swap the `start`, `build`, and `test` scripts in `package.json` for these:
-```
+```json
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
 ```
 
 And add a file called `config-overrides.js` with this:
-```
+```js
 const rewireYarnWorkspaces = require('react-app-rewire-yarn-workspaces');
 
 module.exports = function override(config, env) {
@@ -165,14 +165,14 @@ module.exports = function override(config, env) {
 
 To test the connection with `core`, add this to `src/App.js`:
 
-```
+```js
 import test from 'core/test'
 
 alert(test)
 ```
 
 If you're using Views, test it by overwriting `App.js` with this:
-```
+```js
 import React, {Component} from 'react';
 import test from 'core/test';
 import Test from 'views/Test.view.js';
@@ -192,7 +192,7 @@ export default App;
 There are some issues with running CRNA's init scripts inside the workspace, so
 just go to a temporary folder anywhere and make a new project:
 
-```
+```bash
 # go to some temporary location
 cd /tmp
 # make the app
@@ -215,7 +215,7 @@ it picks up your app.
 
 ...or, use this version want to avoid wrapping your app in a `View`. Add a file
 called `crna-entry.js` with this:
-```
+```js
 import App from './App';
 import Expo from 'expo';
 import React from 'react';
@@ -230,16 +230,16 @@ Expo.registerRootComponent(AwakeInDevApp);
 ```
 
 After that, in `package.json`, replace:
-```
+```json
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
 ```
 for:
-```
+```json
   "main": "crna-entry.js",
 ```
 
 Then, replace `app.json` for this:
-```
+```json
 {
   "expo": {
     "sdkVersion": "23.0.0",
@@ -255,36 +255,51 @@ Note that this guide was created when Expo's SDK was at v23.0.0. If your
 `app.json` has a different version, use that instead.
 
 Install `metro-bundler-config-yarn-workspaces` and `crna-make-symlinks-for-yarn-workspaces`:
-```
+```bash
 yarn add --dev metro-bundler-config-yarn-workspaces crna-make-symlinks-for-yarn-workspaces
 ```
 
 Add a file called `rn-cli.config.js` with this:
-```
+
+```js
 const getConfig = require('metro-bundler-config-yarn-workspaces')
 module.exports = getConfig(__dirname)
 ```
 
-Add a file called `link-workspaces.js` with this:
+> If your workspaces are not located in the root folder (e.g. root/packages/*) 
+you must provide a `nodeModules` option indicating where the `node_modules` root
+folder is located as described below:
+
+```js
+import test from 'core/test'
+
+const getConfig = require('metro-bundler-config-yarn-workspaces')
+
+const options = { nodeModules: path.resolve(__dirname, '..', '..') }
+
+module.exports = getConfig(__dirname, options)  
 ```
+
+Add a file called `link-workspaces.js` with this:
+```js
 require('crna-make-symlinks-for-yarn-workspaces')(__dirname)
 ```
 
 Add `prestart` script to your native project's `package.json`:
-```
+```json
     "prestart": "node link-workspaces.js",
 ```
 
 To test the connection with `core`, add this to `App.js`:
 
-```
+```js
 import test from 'core/test'
 
 alert(test)
 ```
 
 If you're using Views, test it by overwriting `App.js` with this:
-```
+```js
 import React, {Component} from 'react';
 import test from 'core/test';
 import Test from 'views/Test.view.js';
@@ -314,7 +329,7 @@ wouldn't be possible.
 
 At this point, I'd probably recommend wiping all the node_modules of each
 project and starting from scratch:
-```
+```bash
 cd ~/workspaces
 rm -rf node_modules core/node_modules views/node_modules native/node_modules web/node_modules
 yarn
@@ -326,12 +341,12 @@ If you're using Views, you need to start the morpher by project type until
 [viewsdx/morph#31](https://github.com/viewsdx/morph/issues/31) is implemented.
 
 For web, in the `views` folder, run:
-```
+```bash
 yarn web
 ```
 
 For native, in the `views` folder, run:
-```
+```bash
 yarn native
 ```
 
