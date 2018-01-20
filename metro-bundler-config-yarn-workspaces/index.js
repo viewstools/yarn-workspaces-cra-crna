@@ -26,9 +26,7 @@ module.exports = function getConfig(from, options) {
         path.resolve(from),
 
         // Include your forked package as a new root.
-        !!options.nodeModules
-          ? options.nodeModules
-          : path.resolve(from, '..', 'node_modules'),
+        options.nodeModules || path.resolve(from, '..', 'node_modules'),
       ].concat(workspaces)
     },
   }
