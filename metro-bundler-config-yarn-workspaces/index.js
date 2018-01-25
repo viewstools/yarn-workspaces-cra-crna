@@ -2,7 +2,7 @@ const blacklist = require('metro-bundler/src/blacklist')
 const getWorkspaces = require('get-yarn-workspaces')
 const path = require('path')
 
-module.exports = function getConfig(from, options) {
+module.exports = function getConfig(from, options = {}) {
   const workspaces = getWorkspaces(from)
 
   const config = {
