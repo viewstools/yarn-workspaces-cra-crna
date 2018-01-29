@@ -21,4 +21,5 @@ module.exports = function makeSymlinks(from) {
 
   link('expo', root, from);
   link('react-native', root, from);
+  link('jest-expo', root, from);
 };
