@@ -1,4 +1,4 @@
-const blacklist = require('metro-bundler/src/blacklist')
+const blacklist = require('metro/src/blacklist')
 const getWorkspaces = require('get-yarn-workspaces')
 const path = require('path')
 
