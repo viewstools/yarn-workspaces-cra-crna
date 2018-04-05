@@ -1,6 +1,6 @@
 # How to use yarn workspaces with Create React App and Create React Native App (Expo) to share common code across
 
-[This post is on medium too!](https://learn.viewsdx.com/how-to-use-yarn-workspaces-with-create-react-app-and-create-react-native-app-expo-to-share-common-ea27bc4bad62)
+[This post is on medium too!](https://medium.com/viewsdx/how-to-use-yarn-workspaces-with-create-react-app-and-create-react-native-app-expo-to-share-common-ea27bc4bad62)
 
 The goal of this tutorial is to make a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md)
 using [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to share
