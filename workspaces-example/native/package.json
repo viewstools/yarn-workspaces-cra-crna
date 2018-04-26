@@ -16,10 +16,15 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node ../node_modules/jest/bin/jest.js"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "rootDir": "..",
+    "roots": [
+      "<rootDir>/native",
+      "<rootDir>/node_modules"
+    ]
   },
   "dependencies": {
     "expo": "^25.0.0",
