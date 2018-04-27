@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "crna-make-symlinks-for-yarn-workspaces": "^1.0.1",
+    "jest": "^22.4.3",
     "jest-expo": "25.0.0",
     "metro-bundler-config-yarn-workspaces": "^1.0.2",
     "react-native-scripts": "1.11.1",
@@ -24,6 +25,9 @@
     "roots": [
       "<rootDir>/native",
       "<rootDir>/node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|core|views|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|sentry-expo))"
     ]
   },
   "dependencies": {
