@@ -31,8 +31,10 @@ module.exports = function getConfig(from, options = {}) {
     },
     getEnableBabelRCLookup() {
       // Whether Metro should pick up .babelrc configs from host project
-      return options.enableBabelRCLookup || true
-    }
+      return typeof options.enableBabelRCLookup === 'boolean'
+        ? options.enableBabelRCLookup
+        : true
+    },
   }
   return config
 }
