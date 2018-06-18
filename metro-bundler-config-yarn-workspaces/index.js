@@ -29,6 +29,10 @@ module.exports = function getConfig(from, options = {}) {
         options.nodeModules || path.resolve(from, '..', 'node_modules'),
       ].concat(workspaces)
     },
+    getEnableBabelRCLookup() {
+      // Whether Metro should pick up .babelrc configs from host project
+      return options.enableBabelRCLookup || true
+    }
   }
   return config
 }
