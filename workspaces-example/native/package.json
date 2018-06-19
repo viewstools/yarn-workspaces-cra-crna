@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "crna-make-symlinks-for-yarn-workspaces": "^1.0.1",
+    "jest": "^22.4.3",
     "jest-expo": "25.0.0",
     "metro-bundler-config-yarn-workspaces": "^1.0.2",
     "react-native-scripts": "1.11.1",
@@ -16,10 +17,18 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node ../node_modules/jest/bin/jest.js"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "rootDir": "..",
+    "roots": [
+      "<rootDir>/native",
+      "<rootDir>/node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|core|views|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|sentry-expo))"
+    ]
   },
   "dependencies": {
     "expo": "^25.0.0",
