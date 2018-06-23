@@ -271,7 +271,7 @@ you must provide a `nodeModules` option indicating where the `node_modules` root
 folder is located as described below:
 
 ```js
-import test from 'core/test'
+const path = require('path');
 
 const getConfig = require('metro-bundler-config-yarn-workspaces')
 
