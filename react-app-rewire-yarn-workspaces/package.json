@@ -7,6 +7,6 @@
   "author": "Darío Javier Cravoro <dario@uxtemple.com>",
   "license": "MIT",
   "dependencies": {
-    "get-yarn-workspaces": "^1.0.0"
+    "get-yarn-workspaces": "^1.0.2"
   }
 }
