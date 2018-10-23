@@ -6,6 +6,10 @@ const link = (name, fromBase, toBase) => {
   const from = path.join(fromBase, 'node_modules', name);
   const to = path.join(toBase, 'node_modules', name);
 
+  if (!fs.existsSync(from)) {
+    return;
+  }
+
   if (fs.existsSync(to)) {
     fs.removeSync(to);
   }
