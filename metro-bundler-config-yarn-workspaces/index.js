@@ -1,4 +1,9 @@
-const blacklist = require('metro/src/blacklist')
+let blacklist
+try {
+  blacklist = require('metro-config/src/defaults/blacklist')
+} catch (error) {
+  blacklist = require('metro/src/blacklist')
+}
 const getWorkspaces = require('get-yarn-workspaces')
 const path = require('path')
 
